@@ -8,3 +8,11 @@ $colors: (
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
+
+$font-sizes: (
+  XL: 3rem, L: 2.5rem, M: 2rem, S: 1.8rem, XS: 1.6rem,
+);
+
+@function size($size) {
+  @return map-get($font-sizes,$size)
+}
