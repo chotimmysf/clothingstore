@@ -11,19 +11,12 @@ html {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(6rem, 1fr) (minmax(min-content, 16rem)) [8]
-    minmax(6rem, 1fr);
-  grid-template-columns: minmax(6rem, 1fr) repeat(
-      8,
-      minmax(-webkit-min-content, 16rem)
-    ) minmax(6rem, 1fr);
-  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(
-      6rem,
-      1fr
-    );
-  -ms-grid-rows: (min-content) [4];
-  grid-template-rows: repeat(4, -webkit-min-content);
-  grid-template-rows: repeat(4, min-content);
+  -ms-grid-columns: minmax(6rem, 1fr) (minmax(min-content, 16rem))[8] minmax(6rem, 1fr);
+      grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(-webkit-min-content, 16rem)) minmax(6rem, 1fr);
+      grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
+  -ms-grid-rows: (min-content)[4];
+      grid-template-rows: repeat(4, -webkit-min-content);
+      grid-template-rows: repeat(4, min-content);
   grid-row-gap: 1.6rem;
   background-color: #f2f0f1;
 }
@@ -37,13 +30,14 @@ html {
   grid-row: 1/2;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr (minmax(min-content, 16rem)) [7] 1fr;
-  grid-template-columns: 1fr repeat(7, minmax(-webkit-min-content, 16rem)) 1fr;
-  grid-template-columns: 1fr repeat(7, minmax(min-content, 16rem)) 1fr;
-  -ms-grid-rows: (min-content) [3];
-  grid-template-rows: repeat(3, -webkit-min-content);
-  grid-template-rows: repeat(3, min-content);
+  -ms-grid-columns: 1fr (minmax(min-content, 16rem))[7] 1fr;
+      grid-template-columns: 1fr repeat(7, minmax(-webkit-min-content, 16rem)) 1fr;
+      grid-template-columns: 1fr repeat(7, minmax(min-content, 16rem)) 1fr;
+  -ms-grid-rows: (min-content)[3];
+      grid-template-rows: repeat(3, -webkit-min-content);
+      grid-template-rows: repeat(3, min-content);
   grid-gap: 2rem;
+  z-index: 100;
 }
 
 .first-nav {
@@ -60,10 +54,10 @@ html {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
@@ -97,10 +91,10 @@ html {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
@@ -136,13 +130,17 @@ html {
   left: 0;
   width: inherit;
   height: inherit;
+  -webkit-animation: slideshow 24s linear infinite;
+          animation: slideshow 24s linear infinite;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .slideshow-slide img {
   width: inherit;
   height: inherit;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .slideshow-content {
@@ -162,6 +160,180 @@ html {
 .slideshow-content p {
   margin: 1rem 0;
   font-size: 1.8rem;
+}
+
+.slideshow-slide:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.slideshow-slide:nth-child(2) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.slideshow-slide:nth-child(3) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.slideshow-slide:nth-child(4) {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+
+.slideshow-slide:nth-child(5) {
+  -webkit-animation-delay: 16s;
+          animation-delay: 16s;
+}
+
+.slideshow-slide:nth-child(6) {
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+@-webkit-keyframes slideshow {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  2% {
+    visibility: visible;
+    opacity: 1;
+  }
+  18% {
+    visibility: visible;
+    opacity: 1;
+  }
+  20% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes slideshow {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  2% {
+    visibility: visible;
+    opacity: 1;
+  }
+  18% {
+    visibility: visible;
+    opacity: 1;
+  }
+  20% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.products {
+  grid-column: 1/-1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.products-heading {
+  margin: 5rem 0;
+}
+
+.products-heading-text {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: #333;
+}
+
+.products-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product {
+  position: relative;
+}
+
+.product:hover .product-description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product:hover .product-img {
+  opacity: 0.5;
+}
+
+.product-img {
+  width: 100%;
+  -webkit-transition: all 1s 0.5s;
+  transition: all 1s 0.5s;
+}
+
+.product-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 238, 0.6);
+  padding: 2rem;
+  border: 0.1rem solid #333;
+  border-radius: 0.5rem;
+  color: #333;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 1s 0.5s;
+  transition: all 1s 0.5s;
+}
+
+.product-description-heading {
+  font-size: 3rem;
+}
+
+.product-description-price {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.product-description-price span {
+  font-weight: 600;
+}
+
+.product-description-btn {
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid;
+  background-color: #666666;
 }
 
 .heading {
@@ -231,10 +403,10 @@ html {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
