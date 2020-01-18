@@ -1,3 +1,6 @@
+$font-nunito: "Nunito", sans-serif;
+$font-raleway: "Raleway", sans-serif;
+
 $colors: (
   primary: #333,
   secondary: #ffe,
@@ -10,9 +13,13 @@ $colors: (
 }
 
 $font-sizes: (
-  XL: 3rem, L: 2.5rem, M: 2rem, S: 1.8rem, XS: 1.6rem,
+  XL: 3rem,
+  L: 2.5rem,
+  M: 2rem,
+  S: 1.8rem,
+  XS: 1.6rem
 );
 
 @function size($size) {
-  @return map-get($font-sizes,$size)
+  @return map-get($font-sizes, $size);
 }

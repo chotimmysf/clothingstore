@@ -1,6 +1,6 @@
 .products {
-  grid-column: 1/-1;
-  grid-row: 3/4;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
 
   &-heading {
     margin: 5rem 0;
@@ -74,4 +74,8 @@
       background-color: lighten(color(primary), 20%);
     }
   }
+}
+
+.products-btn {
+  @include flexPosition;
 }
