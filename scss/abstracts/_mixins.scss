@@ -49,3 +49,32 @@
     }
   }
 }
+
+@mixin response($breakpoint) {
+  @if ($breakpoint == XL) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == L) {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == M) {
+    @media (max-width: 760px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == S) {
+    @media (max-width: 560px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == XS) {
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+}

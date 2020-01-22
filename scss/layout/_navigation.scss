@@ -2,10 +2,30 @@
   grid-column: 7 / 10;
   grid-row: 1 / 2;
   @include navigation;
+
+  @include response(XL) {
+    grid-column: 6 / 10;
+  }
+  @include response(L) {
+    grid-column: 5 / 10;
+  }
+  @include response(M) {
+    grid-column: 4 / 10;
+  }
+  @include response(S) {
+    grid-column: 2 / 10;
+  }
 }
 
 .second-nav {
   grid-column: 3 / 8;
   grid-row: 3 / 4;
   @include navigation;
+
+  @include response(L) {
+    grid-column: 2 / 9;
+  }
+  @include response(M) {
+    grid-column: 1 / -1;
+  }
 }
