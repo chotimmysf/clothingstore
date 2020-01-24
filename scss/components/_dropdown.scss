@@ -2,7 +2,7 @@
   position: relative;
 
   &::after {
-    font-family: "Font Awesome 5 Free";
+    font-family: $font-garamond;
     content: "\f078";
     font-weight: bold;
   }

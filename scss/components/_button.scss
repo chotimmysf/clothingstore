@@ -33,6 +33,7 @@
     text-transform: uppercase;
     color: color(primary);
     z-index: 100;
+    font-family: $font-garamond;
   }
 
   .arrow {
@@ -44,20 +45,24 @@
       background-color: color(secondary);
       position: absolute;
       transform-origin: right;
+      font-family: $font-gillsans;
     }
 
     &-line-1 {
       width: 0;
       transform: translateX(-0.7rem);
       transition: width 0.2s;
+      font-family: $font-gillsans;
     }
     &-line-2 {
       width: 1rem;
       transform: rotateZ(45deg);
+      font-family: $font-gillsans;
     }
     &-line-3 {
       width: 1rem;
       transform: rotateZ(-45deg);
+      font-family: $font-gillsans;
     }
   }
 }
