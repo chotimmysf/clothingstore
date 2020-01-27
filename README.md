@@ -18,12 +18,11 @@ In addition to learning how CSS grid elements worked, I also learned that the @f
 3. <i>Newsletter Subscriptions:</i> Simple input boxes for collecting information for the retailer's newsletter, with a "Subscribe" button to submit info written in the input boxes. <i>Note: Submissions are NOT actually recorded</i>
 
 <b>TECHNOLOGIES USED</b>
-
-<i>HTML</i>
-<br></br>
-<i>CSS</i>
-<br></br>
-<i>CSS Grid Elements</i>
+<ul>
+<li> HTML</li>
+<li> CSS </li>
+<li> SASS </li>
+</ul>
 
 <b>CHALLENGES</b>
 
