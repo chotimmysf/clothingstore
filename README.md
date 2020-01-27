@@ -34,4 +34,4 @@ Understanding Grid Elements
 <b>FUTURE IMPROVEMENT:</b>
 Refine Skills: Review HTML/CSS elements/functions
 
-<b>MENTOR:</b> Alex Cho
+<b>MENTOR:</b> <a href="https://www.linkedin.com/in/alexsjcho/">Alex Cho</a>
