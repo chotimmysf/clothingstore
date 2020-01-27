@@ -1,4 +1,4 @@
-# clothingstore
+<a href="https://chotimmysf.github.io/clothingstore/">Link to Live Demo App</a>
 
 <b>BACKSTORY</b>
 
